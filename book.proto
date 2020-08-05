@@ -2,7 +2,14 @@ syntax="proto3";
 
 package main;
 
+message Author {
+    string name = 1;
+    int32 yearOfPublishing = 2;
+}
+
 message Book {
     string name = 1;
     int32 isbn = 2;
+    //nesting a field
+    Author author = 3;
 }
